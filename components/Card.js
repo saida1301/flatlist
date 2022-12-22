@@ -1,8 +1,10 @@
 import {Image, View, Text, TouchableHighlight, StyleSheet } from 'react-native'
-import React from 'react'
+import React, {useState} from 'react'
 
 
 const Card = ({name, image, number, moment}) => (
+
+  
     <View style={{flex:1, flexDirection:"row", justifyContent:"space-between",  borderBottomColor: 'grey',
     borderBottomWidth: 2,
     marginBottom: 30, padding:10}}>
@@ -19,13 +21,14 @@ const Card = ({name, image, number, moment}) => (
         </View>
       </View>
       <TouchableHighlight  onPress={()=>{
-    alert('You tapped the button!')
+   handleClick()
   }}
                 style={styles.keywordBox} 
                 >
-                <Text style={styles.keywordText} >Open</Text>
+                <Text style={styles.keywordText} >{buttonText}</Text>
             </TouchableHighlight>
     </View>
+  
   )
 
 

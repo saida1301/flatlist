@@ -46,6 +46,11 @@ const renderItem = ({item} ) => (
   <Card name = {item.name} image = {item.image} number={item.number} moment={item.moment}/>
 )
 
+const [buttonText, setButtonText] = useState('Open');
+
+  function handleClick() {
+    setButtonText('Update');
+  }
 
   return (
     <View style={styles.container}>
